@@ -1,4 +1,4 @@
-# MMMU
+# ChemCoTBench and ChemCoTDataset
 Homepage of ChemCoTBench, A Massive Chemical Understanding and Reasoning Benchmark for Expert AGI. 
 
 This website is adapted from [MMMU website](https://mmmu-benchmark.github.io/#leaderboard) and [MathVista](https://mathvista.github.io/).
