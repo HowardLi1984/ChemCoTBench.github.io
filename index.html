@@ -217,15 +217,27 @@
             <h2 class="title is-3">Overview</h2>
             <div class="content has-text-justified">
               <p>
-                We introduce the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMU) benchmark, a novel benchmark meticulously curated to assess the expert-level multimodal understanding capability of foundation models across a broad scope of tasks. Covering subjects across disciplines, including Art, Business, Health & Medicine, Science, Humanities & Social Science, and Tech & Engineering, and over subfields. The detailed subject coverage and statistics are detailed in the figure. The questions in our benchmark were manually collected by a team of college students (including coauthors) from various disciplines and subjects, drawing from online sources, textbooks, and lecture materials.
+                Despite recent advances in LLM reasoning capabilities, chemistry, a discipline fundamental to areas like drug discovery and materials science, still lacks a benchmark that assesses whether these improvements extend to its complex, domain-specific problem-solving needs. 
+                While several benchmarks have been proposed for LLMs in chemistry, they primarily focus on domain-specific question answering, which suffers from several key limitations:
+              </p>
+              <p>
+                <b>1. Lack of Structured, Stepwise Reasoning and Real-World Relevance:</b> Current evaluations often reduce chemistry assessment to factual recall (e.g., naming compounds or reactions), neglecting the need for operational reasoning akin to arithmetic or coding. 
+                Unlike mathematical problems, where solutions demand explicit, verifiable steps, chemistry QA tasks fail to simulate how experts decompose challenges. 
+                For instance, they don't capture the process of iteratively refining a molecule’s substructure to optimize properties, considering crucial real-world factors like synthesizability or toxicity, or deducing reaction mechanisms through intermediate transformations. 
+                This gap means we're not fully evaluating the analytical depth required in real-world chemistry. Therefore, evaluations must shift from these textbook-like problems to challenges that better reflect practical applications.
+              </p>
+              <p>
+                <b>2. Ambiguous Skill Attribution in Hybrid Evaluations:</b> Existing benchmarks often conflate reasoning, knowledge recall, and numerical computation into single "exam-style" metrics—for instance, asking LLMs to calculate reaction yields while simultaneously recalling reagent properties. 
+                This obscures whether strong performance stems from structured reasoning (e.g., analyzing reaction pathways) or memorized facts (e.g., solvent boiling points). 
+                Such ambiguity hinders targeted model improvement and misaligns evaluations with downstream tasks like drug discovery, where success depends on modular reasoning (e.g., decoupling molecular design from synthesizability checks) rather than monolithic problem-solving.
               </p>
               <img src="static/images/chemcotbench-intro.png" alt="algebraic reasoning" class="center">
               <br>
               <p>
-                 MMMU is designed to measure three essential skills in LMMs: perception, knowledge, and reasoning. Our aim is to evaluate how well these models can not only perceive and understand information across different modalities but also apply reasoning with subject-specific knowledge to derive the solution.
-              </p>
-              <p>
-                Our MMMU benchmark introduces key challenges to multimodal foundation models, as detailed in a figure. Among these, we particularly highlight the challenge stemming from the requirement for both expert-level visual perceptual abilities and deliberate reasoning with subject-specific knowledge. This challenge is vividly illustrated through our tasks, which not only demand the processing of various heterogeneous image types but also necessitate a model's adeptness in using domain-specific knowledge to deeply understand both the text and images and to reason. This goes significantly beyond basic visual perception, calling for an advanced approach that integrates advanced multimodal analysis with domain-specific knowledge.
+                To address these limitations, we introduce ChemCoTBench, a <b>step-by-step</b>, <b>application-oriented</b>, and <b>high-quality</b> benchmark for evaluating LLM reasoning in chemical applications. 
+                A core innovation of ChemCoTBench is its formulation of complex chemical tasks, specifically targeting molecular modeling and design, into explicit sequences of verifiable modular chemical operations on SMILES structures (e.g., substructure addition, deletion, or substitution). 
+                This approach allows for a granular assessment of an LLM's ability to execute and chain together fundamental chemical transformations. The benchmark features progressively challenging tasks, spanning from basic molecular understanding and editing to property-guided structure optimization and complex multi-molecule chemical reactions. 
+                High-quality evaluation is ensured through a dual validation process combining LLM judgment with expert review from 13 chemists.
               </p>
             </div>
           </div>
