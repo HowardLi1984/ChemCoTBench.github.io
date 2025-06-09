@@ -284,6 +284,11 @@
             </div>
             <br>
             <!-------------------------------------------------------------------- Molecule Understanding and edit -------------------------------------------------------------------->
+            <div class="content has-text-centered">
+              <p>
+                <b>Molecule Understanding and Editing Evaluation</b>
+              </p>
+            </div>
             <div class="leaderboard-container">
               <div class="table-wrapper">
                 <table id="molecule-table">
@@ -618,7 +623,7 @@
             <br>
             <div class="content has-text-centered">
               <p>
-                Molecule Optimization Evaluation.
+                <b>Molecule Optimization Evaluation</b>
               </p>
             </div>
             <div class="leaderboard-container">
@@ -845,40 +850,50 @@
           </div>
         </div>
       <!-------------------------------------------------------------------- Chemical Reaction -------------------------------------------------------------------->
+        <div class="content has-text-centered">
+          <p>
+            <b>Chemical Reactions Evaluation</b>
+          </p>
+        </div>
         <div class="leaderboard-container">
           <div class="table-wrapper">
-            <table id="mmmu-table">
+            <table id="chemistry-table">
               <thead>
                 <tr>
-                  <th colspan="1" class="reset-cell clickable" style="text-align: center;">Reset</th>
-                  <th class="pro-details-cell clickable" colspan="2">Fwd subscript major</th>
-                  <th class="val-details-cell clickable" colspan="2">Fwd subcript by</th>
-                  <th class="test-details-cell clickable" colspan="2">Retro</th>
-                  <th class="test-details-cell clickable" colspan="2">Condition</th>
-                  <th class="test-details-cell clickable" colspan="2">NEPP</th>
-                  <th class="test-details-cell clickable" colspan="1">MechSel</th>
+                  <th colspan="3" class="reset-cell" style="text-align: center;">Chemistry Tasks</th>
+                  <th class="pro-details-cell" colspan="2">Fwd major</th>
+                  <th class="val-details-cell" colspan="2">Fwd by</th>
+                  <th class="test-details-cell" colspan="2">Retro</th>
+                  <th class="extra-details-cell" colspan="2">Condition</th>
+                  <th class="extra-details-cell" colspan="2">NEPP</th>
+                  <th class="extra-details-cell" colspan="1">MechSel</th>
                 </tr>
                 <tr>
-                  <th class="sortable clickable" data-sort="string">Models</th>
-                  <th class="sortable clickable" data-sort="number">Top-1</th>
-                  <th class="sortable clickable" data-sort="number">FTS$\uparrow$</th>
-                  <th class="sortable clickable" data-sort="number">Top-1</th>
-                  <th class="sortable clickable" data-sort="number">FTS$\uparrow$</th>
-                  <th class="sortable clickable" data-sort="number">Top-1</th>
-                  <th class="sortable clickable" data-sort="number">FTS$\uparrow$</th>
-                  <th class="sortable clickable" data-sort="number">Top-1</th>
-                  <th class="sortable clickable" data-sort="number">FTS$\uparrow$</th>
-                  <th class="sortable clickable" data-sort="number">Top-1</th>
-                  <th class="sortable clickable" data-sort="number">FTS$\uparrow$</th>
-                  <th class="sortable clickable" data-sort="number">Acc.$\uparrow$</th>
+                  <th class="sortable" data-sort="string">Name</th>
+                  <th class="sortable" data-sort="string">Type</th>
+                  <th class="sortable" data-sort="date">Version</th>
+                  <th class="sortable pro-overall" data-sort="number">Top-1</th>
+                  <th class="hidden pro-details sortable" data-sort="number">FTS↑</th>
+                  <th class="sortable val-overall" data-sort="number">Top-1</th>
+                  <th class="hidden val-details sortable" data-sort="number">FTS↑</th>
+                  <th class="sortable test-overall" data-sort="number">Top-1</th>
+                  <th class="hidden test-details sortable" data-sort="number">FTS↑</th>
+                  <th class="sortable extra-overall" data-sort="number">Top-1</th>
+                  <th class="hidden extra-details sortable" data-sort="number">FTS↑</th>
+                  <th class="sortable extra-overall" data-sort="number">Top-1</th>
+                  <th class="hidden extra-details sortable" data-sort="number">FTS↑</th>
+                  <th class="sortable" data-sort="number">Acc.↑</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td colspan="12" style="text-align: center; font-style: italic; border-top: 2px dashed #ccc;">W/ Thinking</td>
+                <!-- W/ Thinking Section -->
+                <tr class="section-header">
+                  <td colspan="14">W/ Thinking</td>
                 </tr>
                 <tr>
-                  <td>Gemini-2.5-pro-think</td>
+                  <td>Gemini-2.5-pro</td>
+                  <td>think</td>
+                  <td>2.5</td>
                   <td>0.72</td>
                   <td><b>0.89</b></td>
                   <td>0.20</td>
@@ -892,7 +907,9 @@
                   <td><b>0.62</b></td>
                 </tr>
                 <tr>
-                  <td>Claude3.7-sonnet-think</td>
+                  <td>Claude3.7-sonnet</td>
+                  <td>think</td>
+                  <td>3.7</td>
                   <td><b>0.73</b></td>
                   <td>0.87</td>
                   <td><b>0.25</b></td>
@@ -907,6 +924,8 @@
                 </tr>
                 <tr>
                   <td>DeepSeek-R1</td>
+                  <td>think</td>
+                  <td>R1</td>
                   <td>0.48</td>
                   <td>0.71</td>
                   <td>0.21</td>
@@ -920,7 +939,9 @@
                   <td>0.46</td>
                 </tr>
                 <tr>
-                  <td>o3-mini@20250103</td>
+                  <td>o3-mini</td>
+                  <td>think</td>
+                  <td>20250103</td>
                   <td>0.52</td>
                   <td>0.71</td>
                   <td>0.20</td>
@@ -934,7 +955,9 @@
                   <td>0.49</td>
                 </tr>
                 <tr>
-                  <td>o1-mini@20240912</td>
+                  <td>o1-mini</td>
+                  <td>think</td>
+                  <td>20240912</td>
                   <td>0.26</td>
                   <td>0.31</td>
                   <td>0.11</td>
@@ -948,7 +971,9 @@
                   <td>0.44</td>
                 </tr>
                 <tr>
-                  <td>Qwen3-235B-A22B-think</td>
+                  <td>Qwen3-235B-A22B</td>
+                  <td>think</td>
+                  <td>3-235B</td>
                   <td>0.03</td>
                   <td>0.54</td>
                   <td>0.0</td>
@@ -962,7 +987,9 @@
                   <td>0.41</td>
                 </tr>
                 <tr>
-                  <td>Qwen3-32B-think</td>
+                  <td>Qwen3-32B</td>
+                  <td>think</td>
+                  <td>3-32B</td>
                   <td>0.11</td>
                   <td>0.33</td>
                   <td>0.09</td>
@@ -976,7 +1003,9 @@
                   <td>0.46</td>
                 </tr>
                 <tr>
-                  <td>Llama-Nemo-49B-think</td>
+                  <td>Llama-Nemo-49B</td>
+                  <td>think</td>
+                  <td>49B</td>
                   <td>0.09</td>
                   <td>0.18</td>
                   <td>0.04</td>
@@ -989,11 +1018,15 @@
                   <td>0.21</td>
                   <td>0.47</td>
                 </tr>
-                <tr>
-                  <td colspan="12" style="text-align: center; font-style: italic; border-top: 2px dashed #ccc;">W/o Thinking</td>
+        
+                <!-- W/o Thinking Section -->
+                <tr class="section-header">
+                  <td colspan="14">W/o Thinking</td>
                 </tr>
                 <tr>
-                  <td>GPT-4o@20241120</td>
+                  <td>GPT-4o</td>
+                  <td>base</td>
+                  <td>20241120</td>
                   <td>0.28</td>
                   <td>0.58</td>
                   <td>0.04</td>
@@ -1008,6 +1041,8 @@
                 </tr>
                 <tr>
                   <td>DeepSeek-V3</td>
+                  <td>base</td>
+                  <td>V3</td>
                   <td>0.36</td>
                   <td>0.62</td>
                   <td>0.04</td>
@@ -1022,6 +1057,8 @@
                 </tr>
                 <tr>
                   <td>Gemini-2.0-flash</td>
+                  <td>base</td>
+                  <td>2.0</td>
                   <td>0.19</td>
                   <td>0.56</td>
                   <td>0.01</td>
@@ -1036,6 +1073,8 @@
                 </tr>
                 <tr>
                   <td>Qwen3-235B-A22B</td>
+                  <td>base</td>
+                  <td>3-235B</td>
                   <td>0.04</td>
                   <td>0.57</td>
                   <td>0.0</td>
@@ -1050,6 +1089,8 @@
                 </tr>
                 <tr>
                   <td>Qwen3-32B</td>
+                  <td>base</td>
+                  <td>3-32B</td>
                   <td>0.06</td>
                   <td>0.57</td>
                   <td>0.0</td>
@@ -1064,6 +1105,8 @@
                 </tr>
                 <tr>
                   <td>Qwen2.5-72B-Instruct</td>
+                  <td>base</td>
+                  <td>2.5-72B</td>
                   <td>0.04</td>
                   <td>0.49</td>
                   <td>0.0</td>
@@ -1078,6 +1121,8 @@
                 </tr>
                 <tr>
                   <td>Qwen2.5-32B-Instruct</td>
+                  <td>base</td>
+                  <td>2.5-32B</td>
                   <td>0.01</td>
                   <td>0.43</td>
                   <td>0.0</td>
@@ -1092,6 +1137,8 @@
                 </tr>
                 <tr>
                   <td>Llama-3.3-70B-Instruct</td>
+                  <td>base</td>
+                  <td>3.3-70B</td>
                   <td>0.02</td>
                   <td>0.35</td>
                   <td>0.0</td>
@@ -1106,6 +1153,8 @@
                 </tr>
                 <tr>
                   <td>Llama-Nemo-49B</td>
+                  <td>base</td>
+                  <td>49B</td>
                   <td>0.04</td>
                   <td>0.40</td>
                   <td>0.0</td>
@@ -1120,6 +1169,8 @@
                 </tr>
                 <tr>
                   <td>Gemma-2-27b-it</td>
+                  <td>base</td>
+                  <td>2-27b</td>
                   <td>0.01</td>
                   <td>0.55</td>
                   <td>0.0</td>
@@ -1134,6 +1185,8 @@
                 </tr>
                 <tr>
                   <td>Phi-4-14B</td>
+                  <td>base</td>
+                  <td>4-14B</td>
                   <td>0.01</td>
                   <td>0.27</td>
                   <td>0.03</td>
@@ -1148,6 +1201,8 @@
                 </tr>
                 <tr>
                   <td>OLMo2-32B-Instruct</td>
+                  <td>base</td>
+                  <td>2-32B</td>
                   <td>0.0</td>
                   <td>0.10</td>
                   <td>0.0</td>
@@ -1162,6 +1217,8 @@
                 </tr>
                 <tr>
                   <td>Text+Chem T5</td>
+                  <td>special</td>
+                  <td>T5</td>
                   <td>0.44</td>
                   <td>0.74</td>
                   <td>0.0</td>
@@ -1176,6 +1233,7 @@
                 </tr>
               </tbody>
             </table>
+            <p class="test-desc">Performance on chemistry tasks. The best-performing model in each category is <b>in-bold</b>. ↑ indicates higher is better.</p>
           </div>
         </div>
       </div>
